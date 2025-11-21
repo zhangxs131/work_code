@@ -1,0 +1,13 @@
+<任务描述>
+给定用户query以及几个工具：
+1. 分析用户可能的需求,明确用户的查询需求
+2. 从<候选query>中选择一个语义最相似的<候选query>，如果没有语义相似的<候选query>，则选择do_nothing；如果候选query实体不一致，则选择do_nothing
+3. 判断<候选query>选择工具是否可以满足Query需求
+- 工具满足时选择<候选query>对应的工具
+- 当不满足工具Query需求时，选择do_nothing 此时不能再选择其他工具；同理，选择其他工具时，不可以选择do_nothing
+4. 选择工具 select_tools
+- 根据选择的<候选query>对应的工具，分析该工具的description能否满足query需求，如果不能满足query需求，则选择do_nothing工具
+5. 填写参数 parameters
+- 根据<候选query>对应的工具参数内容进行填写Query的参数：
+- parameters选择你选定<候选query>中的对应参数
+</任务描述>

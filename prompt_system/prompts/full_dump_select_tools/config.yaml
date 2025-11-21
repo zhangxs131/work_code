@@ -1,0 +1,13 @@
+variables:
+  # 新增参数填写变量
+  user_query: "{{query}}"
+  context_title: "{{title}}"
+  target_tool: "{{tool_name}}"
+  target_param: "{{param_name}}"
+
+module_sequence:
+  - role.prompt
+  - planner.prompt
+  - param_filler.prompt  # 新增参数填充模块
+  - attention.prompt
+  - param_output.prompt  # 新增参数输出模块

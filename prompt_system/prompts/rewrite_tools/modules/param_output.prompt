@@ -1,0 +1,30 @@
+<输出格式>
+output =
+{
+    "candidate_query":"", //选择的候选query，仅填写query，如果没有候选，填写do_nothing
+    "entity_same":"" ,//候选query实体是否一致，是则为yes，否为no
+    "intent_same": "", //候选query意图是否一致，是则为yes，否为no
+    "tool_name":"",//候选query对应的工具
+    "tools_match": "", //对应工具能否满足搜索query意图，是则为yes，否为no
+    "select_tools":[ // 工具集合以及所选择不同工具需要调用的参数
+        {
+            "tool_name": "工具名", // 工具描述中的name字段
+            "parameters": [ // 根据候选query的参数进行填写
+                {"param_name_1":"value1"},
+                {"param_name_2":"value2"},
+                {...}
+            ],
+            "reason": ""
+        }
+    ]
+}
+
+注意:
+确保输出内容的格式可以被Python的json.loads解析
+请仅输出上述json，不要输出其他任何额外信息
+</输出格式>
+
+
+开始吧！
+Query: {query}
+output =
